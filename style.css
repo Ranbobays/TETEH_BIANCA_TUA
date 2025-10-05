@@ -405,7 +405,68 @@ animation:L 10s linear infinite;
   /*background:radial-gradient(circle at 65% 45%, gray 15%, white 15%);*/
 /*  box-shadow:0 0 2px black;*/
   width:2vh;
+
+  /* ==== RESPONSIVE FIX FOR MOBILE ==== */
+@media screen and (max-width: 768px) {
+  #book {
+    width: 90vw;
+    height: 60vh;
+    left: 5vw;
+    top: 20vh;
+    perspective: 180vw; /* perbesar perspektif agar efek sama */
+  }
+
+  .page {
+    width: 50%;
+    height: 100%;
+    line-height: 60vh; /* sesuaikan tinggi teks */
+  }
+
+  .front, .back {
+    line-height: 60vh;
+    font-size: 1.8vh;
+  }
+
+  img {
+    width: 120px; /* perkecil gambar agar pas di layar kecil */
+    padding: 3px;
+  }
+
+  body {
+    background-color: #111;
+    background-image: linear-gradient(-45deg, #000, #333);
+    overflow: hidden;
+  }
+}
+
+/* ==== EXTRA SMALL SCREEN (HP KECIL) ==== */
+@media screen and (max-width: 480px) {
+  #book {
+    width: 95vw;
+    height: 55vh;
+    left: 2.5vw;
+    top: 22vh;
+    perspective: 200vw;
+  }
+
+  .page {
+    width: 50%;
+    height: 100%;
+    line-height: 55vh;
+  }
+
+  .front, .back {
+    font-size: 1.6vh;
+    line-height: 55vh;
+  }
+
+  img {
+    width: 100px;
+  }
+}
+
   height:2vh;
   border-radius:75% 75% 0% 75%;
   transform:rotate(-45deg);
+
 }
