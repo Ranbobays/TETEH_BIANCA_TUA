@@ -439,34 +439,60 @@ animation:L 10s linear infinite;
   }
 }
 
-/* ==== EXTRA SMALL SCREEN (HP KECIL) ==== */
-@media screen and (max-width: 480px) {
+/* ==== RESPONSIVE MINIMALIS UNTUK HP ==== */
+@media screen and (max-width: 768px) {
   #book {
-    width: 95vw;
-    height: 55vh;
-    left: 2.5vw;
-    top: 22vh;
-    perspective: 200vw;
+    width: 70vw;        /* lebih kecil dari versi sebelumnya */
+    height: 45vh;
+    left: 15vw;
+    top: 25vh;
+    perspective: 140vw; /* disesuaikan supaya efek tetap realistis */
   }
 
   .page {
     width: 50%;
     height: 100%;
-    line-height: 55vh;
+    line-height: 45vh;
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2);
   }
 
   .front, .back {
     font-size: 1.6vh;
-    line-height: 55vh;
+    line-height: 45vh;
   }
 
   img {
-    width: 100px;
+    width: 90px;  /* gambar kecil tapi tetap terlihat jelas */
+    padding: 3px;
+    border-radius: 6px;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    background-image: linear-gradient(-45deg, #000, #333);
   }
 }
 
-  height:2vh;
-  border-radius:75% 75% 0% 75%;
-  transform:rotate(-45deg);
+/* ==== EXTRA SMALL SCREEN (HP KECIL DI BAWAH 480PX) ==== */
+@media screen and (max-width: 480px) {
+  #book {
+    width: 80vw;
+    height: 40vh;
+    left: 10vw;
+    top: 30vh;
+    perspective: 160vw;
+  }
 
+  .page {
+    line-height: 40vh;
+  }
+
+  .front, .back {
+    font-size: 1.4vh;
+  }
+
+  img {
+    width: 80px;
+  }
 }
+
